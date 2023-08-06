@@ -1,0 +1,14 @@
+.ola{
+	outline: 15px dashed darkred;
+	box-shadow: 0 0 0 15px skyblue;
+}
+div{
+	width: 750px;
+	height: 250px;
+	background-color: lightgray;
+}
+h2{
+	position: relative;
+	top: 120px;
+	left: 300px;
+}

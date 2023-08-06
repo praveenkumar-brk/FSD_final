@@ -1,0 +1,44 @@
+.external{
+	
+	color: limegreen;
+	
+}
+#a1{
+	color: cyan;
+}
+h2,p, span{
+	color: darkgoldenrod;
+	font-style: oblique;
+	font-size: 30px;
+	border: dotted;
+	background-color: purple;
+}
+*{
+	font-family: cursive;
+	margin: 0px;
+	padding: 0px;
+}
+input[type="text"]{
+	color: red;
+
+}
+input[type="Number"]{
+	color: green;
+}
+input[type="Password"]{
+	color: thistle;
+	font-family: cursive;
+}
+input[type="email"]{
+	color: blue;
+}
+img[src]{
+	border: dashed;
+
+}
+a:link{
+	color: brown;
+}
+a:visited{
+	color:yellow ;
+}

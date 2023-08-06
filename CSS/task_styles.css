@@ -1,0 +1,53 @@
+.icon{
+}
+a:link{ color: blue;
+
+}
+*{
+	font-family: Georgia,serif;
+	margin: 10px;
+	}
+.header{
+	color: grey;
+}
+.lst{
+list-style-type: square;
+}
+.olst1{
+list-style-type: upper-alpha;
+}
+.pretxt1{
+	background-color: lightgrey;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 25px;
+}
+pre{
+	position: relative;
+	top: 40px;
+	left: 50px;
+}
+.codetxt{
+	background-color: lightgrey;
+	font-size: 25px;
+}
+blockquote{
+	font-style: italic;
+}
+.login{
+	float: right;
+	
+}
+.sub{
+	font-style: unset;
+	height: 20px;
+	width: 150px;
+}
+.foot{
+	background-color: grey;
+	position: relative;
+	top:500px;
+	width:100%; height: 100px;
+}
+.empty{
+	float: left;
+}

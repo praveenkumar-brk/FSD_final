@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>profile page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="profile_page.css">
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			background-color: lightgrey;
+		}
+		.head{
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 100%;
+			height: 35px;
+			box-sizing: border-box;
+			background-color: whitesmoke;
+		}
+		.b1{color: whitesmoke;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-left: 35%;
+			background-color: limegreen;
+			border: none;
+			padding: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-radius: 3px;
+		}
+		.b2{
+			color: whitesmoke;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			background-color: royalblue;
+			border: none;
+			padding: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-radius: 3px;
+		}
+		.b3{
+			color: whitesmoke;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			background-color: royalblue;
+			border: none;
+			padding: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-radius: 3px;
+		}
+		.b4{
+			color: whitesmoke;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			background-color: royalblue;
+			border: none;
+			padding: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-radius: 3px;
+		}
+		.b5{
+			color: whitesmoke;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			background-color: orangered;
+			border: none;
+			padding: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-radius: 3px;
+		}
+		.c1{
+			margin-bottom: 10px;
+			margin-left: 20px;
+			margin-right: 20px;
+			width: 850px;
+			height: 300px;
+			background-color: whitesmoke;
+			float: right;
+			border-radius: 5px;
+		}
+		table{
+			font-family: arial;
+			font-weight: bold;
+			margin:10px;
+					}
+		.t1{ padding-right:110px;
+
+
+		}
+		.t2{ 
+
+		}
+		input{ 
+			padding-bottom: 5px;
+			padding-top: 5px;
+			padding-left: 10px;
+			padding-right: 450px;
+			margin-bottom: 15px;
+		}
+		.bt{
+			padding-top: 20px;
+			margin-left: 0px;
+			
+		}
+		.bt2{
+			background-color: blue;
+			border-radius: 3px;
+			border:none;
+			padding-right: 15px;
+			padding-left: 15px;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			color: whitesmoke;
+		}
+		.c2{
+			float: left;
+			width: 380px;
+			height: 520px;
+			border-radius: 5px;
+			background-color: whitesmoke;
+			margin-left: 20px;
+		}
+		.c3{
+			margin-bottom: 10px;
+			margin-left: 20px;
+			margin-right: 20px;
+			width: 850px;
+			height: 380px;
+			background-color: whitesmoke;
+			float: right;
+			border-radius: 5px;}
+		img{
+			width: 100px;
+			height: 100px;
+			border-radius: 100%;
+			border: 3px solid blue ;
+			object-fit: cover;
+			margin-top: 20px;
+			margin-left: 35%;
+		}
+		h2{
+			text-align: center;
+			font-family: arial;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		p{
+			font-family: arial;
+			text-align: center;
+			opacity: 0.7;
+			margin-bottom: 5px;
+		}
+		.follow{
+			color: white;
+			background-color: blue;
+			border: none;
+			border-radius: 3px;
+			padding: 9px;
+		}
+		.msg{
+			color: blue;
+			border-radius: 3px;
+			border-color: blue;
+			padding: 7px;
+		}
+		.btag{
+			margin-top: 10px;
+			padding-left: 35%;
+		}
+		.hr1{
+			 width: 340px;
+			 height: 1px;
+			 margin-top: 10px;
+			 margin-left: 20px;
+			 background-color: grey;
+		}
+		.fa-solid{margin-top: 30px;
+			margin-left: 20px;
+			font-size:20px;
+		}
+		i{margin-top: 10px;
+			font-weight: bold;
+			margin-left: 20px;
+			font-size:20px;
+		}
+		span{
+			float: right;
+			opacity: 0.5;
+			margin-top: 10px;
+			margin-right: 40px;
+		}
+		.s1{
+			float: right;
+			opacity: 0.5;
+			margin-top: 30px;
+			margin-right: 40px;
+		}
+		h3{
+			margin: 10px;
+			margin-bottom: 20px;
+			font-family: arial;
+		}
+		.p1{
+			text-align: left;
+			font-family: arial;
+			opacity: 1.0;
+			margin-top: 20px;
+			margin: 10px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="head">
+			<button class="b1">Preview</button>
+			<button class="b2">HTML</button>
+			<button class="b3">CSS</button>
+			<button class="b4">Download</button>
+			<select class="b5">
+			<option>Actions</option>
+			<option>CSS</option>
+			</select>
+		</div>
+		<div class="c1">
+			<table>
+				<tr>
+					<td class="t1">Full Name</td>
+					<td class="t2"><input type="text" value="John Doe"></td>
+				</tr>
+				<tr>
+					<td class="t1">Email</td>
+					<td class="t2"><input type="Email" value="john@example.com"></td>
+				</tr>
+				<tr>
+					<td class="t1">Phone</td>
+					<td class="t2"><input type="text" value="(239) 816-9029"></td>
+				</tr><tr>
+					<td class="t1">Mobile</td>
+					<td class="t2"><input type="text" value="(320) 380-4539"></td>
+				</tr>
+				<tr>
+					<td class="t1">Address</td>
+					<td class="t2"><input type="text" value="Bay Area, San Francisco,CA"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="bt"><button class="bt2">Save Changes</button></td>
+				</tr>
+			</table>
+		</div>
+		<div class="c2">
+			<img src="https://th.bing.com/th/id/OIP.fyl_kbazs9e4BDrBY2pIDQHaFj?pid=ImgDet&rs=1">
+			<h2>John Doe</h2>
+			<p>Full stack Developer</p>
+			<p>Bay Area, San Francisco,CA</p>
+			<div class="btag"><button class="follow">Follow</button>
+			<button class="msg">Message</button>
+			</div>
+			<div class="hr1">
+			</div>
+			<div class="web"><i class="fa-solid fa-globe" class=></i>  Website<span class="s1">https://bootdey.com</span>
+				<div class="hr1">
+			</div>
+			<i class="fa-brands fa-github"></i> Github<span>bootdey</span></div>
+			<div class="hr1">
+			</div>
+			<i class="fa-brands fa-twitter" style="color: blue;"></i> Twitter<span>@bootdey</span>
+			<div class="hr1"></div>
+			<i class="fa-brands fa-instagram" style="color: deeppink;"></i> Instagram<span>bootdey</span>
+			<div class="hr1"></div>
+			<i class="fa-brands fa-facebook" style="color: blue;"></i> Facebook<span>bootdey</span>
+
+		</div>
+		<div class="c3">
+			<h3>Project Status</h3>
+			<p class="p1">Web Design</p>
+				<progress value="75" max="100" style="width: 800px; height: 12px; accent-color: blue; margin-left: 20px; "></progress>
+			<p class="p1">Web Markup</p>
+			<progress value="75" max="100" style="width: 800px; height: 12px; accent-color: red; margin-left: 20px; "></progress>
+			<p class="p1">One Page</p>
+			<progress value="65" max="100" style="width: 800px; height: 12px; accent-color: green; margin-left: 20px; "></progress>
+			<p class="p1">Mobile Template</p>
+			<progress value="90" max="100" style="width: 800px; height: 12px; accent-color: yellow; margin-left: 20px; "></progress>
+			<p class="p1">Backended API</p>
+			<progress value="70" max="100" style="width: 800px; height: 12px; accent-color: skyblue; margin-left: 20px; "></progress>
+
+		</div>
+	</div>
+</body>
+</html>
