@@ -1,0 +1,23 @@
+img{
+	width: 400px;
+	height: 275px;
+	float: left;
+	position: absolute;
+	top:200px;
+
+	background-size: cover;
+}
+.d1{
+	position: relative;
+	top: 70px;
+}
+.g1{padding-right: 10px; border: none;}
+.b1{
+	position: relative;
+	top: 450px;
+}
+.c1{
+	padding-left: 0px;
+	font-size: 20px;
+	font-weight: bold;
+}
