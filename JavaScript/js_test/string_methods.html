@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Methods</title>
+</head>
+<body>
+    <h1>String Methods</h1>
+
+    <div>
+        <h2>Sample Text:</h2>
+        <p id="sampleText">Hello ! My full name is balabhadruni rama krishna praveen kumar</p>
+    </div>
+
+    <div>
+        <h2>Outputs:</h2>
+        <p id="substrResult"></p>
+        <p id="substringResult"></p>
+        <p id="replaceResult"></p>
+        <p id="searchResult"></p>
+        <p id="lowercaseText"></p>
+        <p id="uppercaseText"></p>
+        <p id="indexOfResult"></p>
+        <p id="includesResult"></p>
+        <p id="sliceResult"></p>
+        <p id="concatResult"></p>
+        <p id="lastIndexOfResult"></p>
+        <p id="charCode"></p>
+        <p id="trimmedText"></p>
+        <p id="charAtResult"></p>
+        <p id="valueOfResult"></p>
+        <p id="splitResult"></p>
+        <p id="numberToString"></p>
+        <p id="matchResult"></p>
+    </div>
+
+    <script>
+        const sampleText = "Hello ! My full name is balabhadruni rama krishna praveen kumar";
+
+        document.getElementById("sampleText").textContent = sampleText;
+        const substrResult = sampleText.substr(7, 5);
+        document.getElementById("substrResult").textContent = 'substrResult:'+substrResult;
+
+        const substringResult = sampleText.substring(7, 12);
+        document.getElementById("substringResult").textContent = `substringResult: ${substringResult}`;
+
+        const replaceResult = sampleText.replace("sample", "example");
+        document.getElementById("replaceResult").textContent = `replaceResult: ${replaceResult}`;
+
+        const searchResult = sampleText.search("sample");
+        document.getElementById("searchResult").textContent = `searchResult: ${searchResult}`;
+
+        const lowercaseText = sampleText.toLocaleLowerCase();
+        document.getElementById("lowercaseText").textContent = `lowercaseText: ${lowercaseText}`;
+
+        const uppercaseText = sampleText.toLocaleUpperCase();
+        document.getElementById("uppercaseText").textContent = `uppercaseText: ${uppercaseText}`;
+
+        const indexOfResult = sampleText.indexOf("is");
+        document.getElementById("indexOfResult").textContent = `indexOfResult: ${indexOfResult}`;
+
+        
+        const includesResult = sampleText.includes("World");
+        document.getElementById("includesResult").textContent = `includesResult: ${includesResult}`;
+
+        const sliceResult = sampleText.slice(7, 12);
+        document.getElementById("sliceResult").textContent = `sliceResult: ${sliceResult}`;
+
+        const concatResult = sampleText.concat(" Concatenated.");
+        document.getElementById("concatResult").textContent = `concatResult: ${concatResult}`;
+
+        const lastIndexOfResult = sampleText.lastIndexOf("is");
+        document.getElementById("lastIndexOfResult").textContent = `lastIndexOfResult: ${lastIndexOfResult}`;
+
+        const charCode = sampleText.charCodeAt(0);
+        document.getElementById("charCode").textContent = `charCode: ${charCode}`;
+
+        const trimmedText = sampleText.trim();
+        document.getElementById("trimmedText").textContent = `trimmedText: ${trimmedText}`;
+
+        const charAtResult = sampleText.charAt(15);
+        document.getElementById("charAtResult").textContent = `charAtResult: ${charAtResult}`;
+
+        const valueOfResult = sampleText.valueOf();
+        document.getElementById("valueOfResult").textContent = `valueOfResult: ${valueOfResult}`;
+
+        const splitResult = sampleText.split(" ");
+        document.getElementById("splitResult").textContent = `splitResult: ${splitResult}`;
+
+        const numberToString = (42).toString();
+        document.getElementById("numberToString").textContent = `numberToString: ${numberToString}`;
+
+        const matchResult = sampleText.match(/is/g);
+        document.getElementById("matchResult").textContent = `matchResult: ${matchResult}`;
+    </script>
+</body>
+</html>

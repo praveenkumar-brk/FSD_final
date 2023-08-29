@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>palindrome</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a=prompt('ENTER A NUMBER')
+		r=''
+		for (var i = a.length - 1; i >= 0; i--) {
+			r+=a[i]
+		}
+		if (a==r) {
+			document.write('palindrome')
+		}
+		else{
+			document.write('not palindrome')
+		}
+	</script>
+
+</body>
+</html>

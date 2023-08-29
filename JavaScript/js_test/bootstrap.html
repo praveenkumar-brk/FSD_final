@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table with Add, Edit, and Delete</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .highlighted {
+            background-color: #f2f2f2;
+        }
+        .heading{
+            font-size: 30px;
+        }
+        .heading span{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <p class="heading">Product <span>Details</span></p>
+        <button class="btn btn-primary" style="border-radius: 20px; float:right;"onclick="addRow()">
+            <i class="fas fa-plus"></i> Add New
+        </button>
+        <br>
+        <br>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Product id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+            </tbody>
+        </table>
+        
+    </div>
+
+    <script>
+        const initialData = [
+            { name: "456789", email: "Realme mobile", price: "16000" },
+            { name: "123456", email: "Mi mobile", price: "18000" },
+            { name: "365648", email: "Vivo mobile", price: "20000" }
+        ];
+
+        const tableBody = document.getElementById("table-body");
+
+        function populateTable(data) {
+            tableBody.innerHTML = "";
+
+            data.forEach((row, index) => {
+                const newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                    <td contenteditable="false" id="name-${index}">${row.name}</td>
+                    <td contenteditable="false" id="email-${index}">${row.email}</td>
+                    <td contenteditable="false" id="price-${index}">${row.price}</td>
+                    <td>
+                        <button class="btn" style="color: orange;" onclick="editRow(${index})">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+                        <button class="btn" style="color: red;" onclick="deleteRow(${index})">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                `;
+
+                tableBody.appendChild(newRow);
+            });
+        }
+
+        populateTable(initialData);
+
+        function addRow() {
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+                <td contenteditable="true" id="new-name"></td>
+                <td contenteditable="true" id="new-email"></td>
+                <td contenteditable="true" id="new-price"></td>
+                <td>
+                    <button class="btn" style="color: blue;" onclick="saveNewRow()">
+                        <i class="fas fa-check"></i> 
+                    </button>
+                    <button class="btn" style="color: red;" onclick="cancelNewRow()">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+            `;
+
+            tableBody.appendChild(newRow);
+        }
+
+        // Function to save a new row
+        function saveNewRow() {
+            const newName = document.getElementById("new-name").textContent;
+            const newEmail = document.getElementById("new-email").textContent;
+            const newPrice = document.getElementById("new-price").textContent;
+
+            if (newName && newEmail && newPrice) {
+                const newRowData = { name: newName, email: newEmail, price: newPrice };
+                initialData.push(newRowData);
+                populateTable(initialData);
+            } else {
+                alert("Please enter name, email, and price before saving.");
+            }
+        }
+
+        function cancelNewRow() {
+            const newRow = tableBody.lastChild;
+            tableBody.removeChild(newRow);
+        }
+
+        function editRow(index) {
+            const name = document.getElementById(`name-${index}`);
+            const email = document.getElementById(`email-${index}`);
+            const price = document.getElementById(`price-${index}`);
+            
+            if (name.contentEditable === 'true') {
+                name.contentEditable = false;
+                email.contentEditable = false;
+                price.contentEditable = false;
+                name.classList.remove("highlighted");
+                email.classList.remove("highlighted");
+                price.classList.remove("highlighted");
+                const editButton = name.parentElement.querySelector('button');
+                editButton.innerHTML = '<i class="fas fa-pencil-alt"></i>';
+            } else {
+                
+                name.contentEditable = true;
+                email.contentEditable = true;
+                price.contentEditable = true;
+                name.classList.add("highlighted");
+                email.classList.add("highlighted");
+                price.classList.add("highlighted");
+                const editButton = name.parentElement.querySelector('button');
+                editButton.innerHTML = '<i class="fas fa-check"></i>';
+            }
+            
+            if (name.contentEditable === 'true') {
+                name.focus();
+            }
+        }
+
+        function saveEditedRow(index) {
+            const name = document.getElementById(`name-${index}`);
+            const email = document.getElementById(`email-${index}`);
+            const price = document.getElementById(`price-${index}`);
+            const editButton = document.createElement("button");
+
+            editButton.className = "btn";
+            editButton.style.color = "orange";
+            editButton.innerHTML = '<i class="fas fa-pencil-alt"></i>';
+            editButton.onclick = function () {
+                editRow(index);
+            };
+
+            name.contentEditable = false;
+            email.contentEditable = false;
+            price.contentEditable = false;
+
+            name.classList.remove("highlighted");
+            email.classList.remove("highlighted");
+            price.classList.remove("highlighted");
+            
+            const tdAction = name.parentElement.nextElementSibling;
+            tdAction.replaceChild(editButton, tdAction.firstChild);
+
+            initialData[index].name = name.textContent;
+            initialData[index].email = email.textContent;
+            initialData[index].price = price.textContent;
+        }
+
+        function deleteRow(index) {
+            const confirmDelete = confirm("Are you sure you want to delete this row?");
+            if (confirmDelete) {
+                initialData.splice(index, 1);
+                populateTable(initialData);
+                alert("Row deleted!");
+            }
+        }
+    </script>
+</body>
+</html>

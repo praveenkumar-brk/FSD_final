@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>array methods</title>
+</head>
+<body>
+	<h1>Javascript array methods</h1>
+	<script type="text/javascript">
+		var arr=[9,18,27,36,45];
+		document.write('my array: '+arr+'<br>');
+		let map_f=arr.map(function(ele,i,array){
+			return ele*2
+		});
+		document.write(' after map() method:  '+map_f+'<br>');
+		document.write('<br>');
+
+		//filter()
+		var arr=['praveen','prakash','sandeep'];
+		document.write('my array: '+' '+arr+'<br>');
+		let filter_f=arr.filter(function(ele,i,array){
+			return ele.startsWith('p')
+		});
+		document.write(' after filter() method:'+' '+filter_f+'<br>');
+		document.write('<br>');
+
+		//sort()
+		var arr=[1,4,6,3,2,7,9];
+		document.write('my array: '+' '+arr+'<br>');
+		document.write(' after sort() method:'+' '+arr.sort()+'<br>');
+		document.write('<br>');
+
+		//forEach()
+		var arr=[1000,3000,2400,7500,4230,6455];
+		document.write('my array: '+' '+arr+'<br>');
+		arr.forEach(function(ele,i,array){
+			var add=ele/10;
+			array[i]=ele+add;	
+		});
+		document.write(' after forEach() method:'+' '+arr+'<br>');
+		document.write('<br>');
+		
+		//concat()
+		var arr=['praveen','sai','hussain'];
+		var frnd=['sonu']
+		document.write('my array: '+' '+arr+'<br>');
+		document.write(' after concat() method:'+' '+arr.concat(frnd)+'<br>');
+		document.write('<br>');
+
+		//every
+		let score= [55,12,87,86,54,64];
+		let final= score.every(function(points){
+			return score > 35;
+		});
+		document.write('my array: '+' '+score+'<br>');
+		document.write(' after every() method:'+' '+final+'<br>');
+		document.write('<br>');
+		//some()
+		let ids = ['22A95A0301','22A95A0306'];
+		let exist_or_not =ids.some(function(ele,i,arr){
+		return ele == '22A95A0306'
+	});
+		document.write('my array: '+' '+ids+'<br>');
+		document.write(' after some() method:'+' '+exist_or_not+'<br>');
+		document.write('<br>');
+
+		//includes()
+		let pins = ['22A95A0301','22A95A0306'];
+		let includes=pins.includes('22A95A0306')
+		document.write('my array: '+' '+pins+'<br>');
+		document.write(' after includes() method:'+' '+includes+'<br>');
+		document.write('<br>');
+
+		//join()
+		var names=['praveen','prakash','sandeep'];
+		document.write('my array: '+' '+arr+'<br>');
+		let join_f=names.join('*')
+		document.write(' after join() method:'+' '+join_f+'<br>');
+		document.write('<br>');
+
+		//reduce()
+		var nums=[1,2,3];
+		document.write('my array: '+' '+nums+'<br>');
+		var red=nums.reduce((acc,num)=>acc+num,0);
+		document.write('after reduce() method:'+' '+red+'<br>');
+		document.write('<br>');
+
+		//find()
+		var arr=[9,18,27,36,45];
+		document.write('my array: '+arr+'<br>');
+		let find_f=arr.find(function(ele,i,array){
+			return ele%2==0
+		});
+		document.write(' after map() method:  '+find_f+'<br>');
+		document.write('<br>');
+
+		//findindex()
+		var marks=[19,18,34,36,45];
+		document.write('my array: '+marks+'<br>');
+		let findindex_f=marks.findIndex(function(num,i){
+			return num==36;
+		});
+		document.write(' after findindex() method:  '+findindex_f+'<br>');
+		document.write('<br>');
+
+		//fill()
+		var marks=[19,18,34,36,45];
+		document.write('my array: '+marks+'<br>');
+		let fill=marks.fill(100);
+		document.write(' after fill() method:  '+fill+'<br>');
+		document.write('<br>');
+
+		//slice()
+		var records=['bmw','rr','lamborgini','ford','audi','volvo'];
+		document.write('my array: '+records+'<br>');
+		let slice_f=records.slice(1,4);
+		document.write(' after slice() method:  '+slice_f+'<br>');
+		document.write('<br>');
+
+		//reverse()
+		var records=['bmw','rr','lamborgini','ford','audi','volvo'];
+		document.write('my array: '+records+'<br>');
+		document.write(' after slice() method:  '+records.reverse()+'<br>');
+		document.write('<br>');
+
+		//push()
+		var values=[2,3,4,6,7,9]
+		document.write('my array: '+values+'<br>');
+		var ele=values.push(100)
+		document.write(' after pop() method:  '+values+'<br>');
+		document.write('<br>');
+
+		//pop()
+		var values=[2,3,4,6,7,9]
+		document.write('my array: '+values+'<br>');
+		var ele=values.pop()
+		document.write(' after pop() method:  '+values+'<br>');
+		document.write('<br>');
+
+		//shift()
+		var ratings=[3,5,3,2];
+		document.write('my array: '+ratings+'<br>');
+		ratings.shift();
+		document.write(' after shift() method:  '+ratings+'<br>');
+		document.write('<br>');
+
+		//unshift()
+		var t=[1,2,6,8];
+		document.write('my array: '+ratings+'<br>');
+		t.unshift(3,4);
+		document.write(' after shift() method:  '+t+'<br>');
+		document.write('<br>');
+
+
+
+
+
+	</script>
+
+</body>
+</html>

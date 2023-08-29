@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Key-Value Pair to Object</title>
+</head>
+<body>
+    <h1>Add Key-Value Pair to Object</h1>
+
+    <div>
+        <label for="key">Key:</label>
+        <input type="text" id="key">
+    </div>
+    <div>
+        <label for="value">Value:</label>
+        <input type="text" id="value">
+    </div>
+    <button onclick="addKeyValuePair()">Add Key-Value Pair</button>
+
+    <h2>Object:</h2>
+    <pre id="output"></pre>
+
+    <script>
+        let myObject = {};
+
+        function addKeyValuePair() {
+            const keyInput = document.getElementById("key");
+            const valueInput = document.getElementById("value");
+
+            const key = keyInput.value;
+            const value = valueInput.value;
+
+            if (key && value) {
+    
+                myObject[key] = value;
+
+                displayObject();
+            } else {
+                alert("Please provide both a key and a value.");
+            }
+
+            // Clear the input fields
+            keyInput.value = "";
+            valueInput.value = "";
+        }
+
+        function displayObject() {
+            const output = document.getElementById("output");
+            output.textContent = JSON.stringify(myObject, null, 2);
+        }
+        
+    </script>
+</body>
+</html>
