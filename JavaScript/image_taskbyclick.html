@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .image-container {
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+            width: 30%;
+        }
+
+        .image-container img {
+            width: 400px;
+            height: 100px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #div1 {
+            border: 10px solid green;
+            float: left;
+            padding: 50px;
+
+        }
+        #div2{
+            border: 10px solid green;
+            float: left;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container" id="div1">
+        <img src="1a.jpg" onclick="swapImages('div1', 'div2', 0)" alt="Image 1" style="object-fit: cover">
+        <img src="2a.jpg" onclick="swapImages('div1', 'div2', 1)" alt="Image 2" style="object-fit: cover">
+        <img src="3a.jpg" onclick="swapImages('div1', 'div2', 2)" alt="Image 3" style="object-fit: cover">
+    </div>
+
+    <div class="image-container" id="div2">
+        <img src="4a.jpg" onclick="swapImages('div2', 'div1', 0)" alt="Image 4" style="object-fit: cover">
+        <img src="5a.jpg" onclick="swapImages('div2', 'div1', 1)" alt="Image 5" style="object-fit: cover">
+        <img src="6a.jpg" onclick="swapImages('div2', 'div1', 2)" alt="Image 6" style="object-fit: cover">
+    </div>
+    
+
+    <script>
+        function swapImages(sourceDiv, targetDiv, index) {
+            let source = document.getElementById(sourceDiv);
+            let target = document.getElementById(targetDiv);
+
+            // Find the image in the target div at the given index
+            let targetImage = target.querySelectorAll('img')[index];
+
+            // Swap the src attributes
+            let tempSrc = targetImage.src;
+            targetImage.src = source.querySelectorAll('img')[index].src;
+            source.querySelectorAll('img')[index].src = tempSrc;
+        }
+    </script>
+</body>
+</html>

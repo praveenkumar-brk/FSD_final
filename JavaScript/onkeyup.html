@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		input{
+			border-radius: 6px;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<label>Enter Name</label>
+	<input type="text" name="" onkeyup="sam(this.value)" id="ins_id">
+	<br>
+	<span id="sp_id"></span>
+	<center>
+		<select style="width:300px; height: 30px;" onchange="sample(this.value)">
+			<option>--select the college--</option>
+			<option value="AEC">AEC</option>
+			<option value="ACET">ACET</option>
+			<option value="ACOE">ACOE</option>
+		</select>
+		<p id="p"></p></center>
+	<script type="text/javascript">
+		function sample(clg) {
+			document.getElementById('p').innerText=clg;
+		}
+		function sam(str) {
+			
+				if (str.length<4) {
+				document.getElementById('sp_id').innerText="Enter more than 3 characters";
+				document.getElementById('sp_id').style.color="red";
+				if (str=='') {
+				document.getElementById('sp_id').innerText="Please Enter Name";
+				document.getElementById('sp_id').style.color="red";
+				document.getElementById('ins_id').style.border="2px solid red";
+
+					}
+				}
+			else{
+				document.getElementById('sp_id').innerText="";
+				document.getElementById('ins_id').style.border="1px solid black";
+
+			}
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<p class="demo"></p>
+	<script type="text/javascript">
+		var a=21;
+		document.write("Value is a:",a);
+		document.write("<br>")
+		var name="NDP"
+		name+=' sim'
+		document.write(name.length)
+		document.write("<br>")
+		var s="Praveen"
+		s+=" Prakash&Varaprasad"
+		document.write(s+"<br>")
+		document.write(typeof(s)+"<br>")
+		var a=[10,'praveen','prakash'];
+		document.write(a.length+"<br>")
+		var trainee=[{
+			'name':'Praveen',
+			'rollno':'22A95A0301',
+			'college':'AEC',
+			'branch':'MECH'
+		},
+		{
+			'name':'Varaprasad',
+			'rollno':'22A95A0306',
+			'college':'AEC',
+			'branch':'MECH'
+		}]
+		console.log(trainee[0].name);
+		console.log(trainee[0].rollno);
+		console.log(trainee[0].college);
+		console.log(trainee[0].branch);
+		console.log(trainee[1].name	);
+		console.log(trainee[1].rollno);
+		console.log(trainee[1].college);
+		console.log(trainee[1].branch);
+		let txt = "";
+		
+		for (var i = 0; i < trainee.length; i++) {
+			for (let x in trainee[i]) {
+			  document.write(i+1,"."+trainee[i][x] + " ");
+			}
+			document.write("<br>"+"<br>")
+		}
+
+		
+	</script>
+</body>
+</html>

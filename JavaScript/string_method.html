@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<table border="1" cellspacing="0"  cellpadding="5px">
+		<tr>
+			<td>d</td>
+			<td>r</td>
+			<td>i</td>
+			<td>v</td>
+			<td>e</td>
+			<td>&ensp;</td>
+			<td>r</td>
+			<td>e</td>
+			<td>a</td>
+			<td>d</td>
+			<td>y</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>-11</td>
+			<td>-10</td>
+			<td>-9</td>
+			<td>-8</td>
+			<td>-7</td>
+			<td>-6</td>
+			<td>-5</td>
+			<td>-4</td>
+			<td>-3</td>
+			<td>-2</td>
+			<td>-1</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		 let str='drive ready'
+		// document.write(typeof(str));
+		// document.write('<br>');
+		// let str1=new String('drive');
+		// document.write(typeof(str1));
+		 function ss(str_name) {
+		 	document.write('<b>'+str_name+'</br>')
+		 }
+		 ss("Original string="+str)
+		 ss("String length="+str.length)
+		 ss("String ele="+str[3])
+		 //CharAt method
+		 ss("Char At method="+str.charAt(3))
+		 ss("index of e="+str.indexOf('e'))
+		 ss("index of r="+str.indexOf('r'))
+		 ss("index of r="+str.lastIndexOf('r'))
+		 let str2='  praveen kumar ';
+		 ss("trim method ="+str2.trim()) //remove the spaces from left to right
+		 let str3='Drive READY'
+		 ss("Lower Case ="+str3.toLowerCase())
+		 ss("Upper Case ="+str2.toUpperCase())
+		 //concate method
+		 let str5=' Prakash'
+		 let str4=' Surya'
+		 let str6=' Balabhadruni'
+		 ss("concate string="+str4.concat(str5,str6));
+		 //include method
+		 ss("Include method="+" "+str6.includes('bha'))
+		 ss("Include method="+" "+str6.includes('rani'))
+		 //converting string into an array
+		 let str7='Jai shree ram';
+		 let str8='Praveen&Prakash,ram';
+		 console.log(str8.split('&'))//string divides based on deliminator"&"
+		 console.log(str8.split(','))//string divides based on deliminator","
+		 //Starts with => return boolean value
+		 let str9='vara';
+		 ss("starts with="+str9.startsWith('v'));
+		 ss("starts with="+str9.startsWith('a'));
+		 //endsWith => returns the boolean value
+		 let str10='indu';
+		 ss("Ends with="+str10.endsWith('u'));
+		 ss("Ends with="+str10.endsWith('a'));
+		 //slice method
+		 ss("slice method="+str.slice(1,5));
+		 ss("slice method="+str.slice(-4));
+		 ss("slice method="+str.slice(-4,-2));
+		 //substring method
+		 //it allows possitive indexes only
+		 ss("slice method="+str.substring(1,4));//=(1,4-1)=1,3
+		 ss("slice method="+str.substring(4,1)); //4,1=1,4 //riv
+		 //substr method
+		 //substr(startposition,length of char from 1st position)
+		 ss("slice method="+str.substr(1,4));
+
+
+
+	</script>
+
+</body>
+</html>

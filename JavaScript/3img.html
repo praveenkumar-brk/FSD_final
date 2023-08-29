@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#firstDiv img {
+            width: 200px;
+            height: 100px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #secondDiv img {
+
+            max-width: 300px;
+            max-height: 200px;
+            align
+        }
+	</style>
+</head>
+<body>
+	<h1>Image Selection</h1>
+	<div style="width:600px;height: 300px; border:1px solid #000;">
+		<div style="width: 380px;height:300px; "></div>
+		
+	</div>
+   <!--  <div id="output_id">
+        <div id="firstDiv">
+            <h2>First Div</h2>
+            <img src="1.jpeg" alt="Image 1"  style="object-fit: cover" onclick="getimage('1.jpeg')">
+            <img src="2.jpeg" alt="Image 2" onclick="getimage('2.jpeg')" >
+            <img src="3.jpeg" alt="Image 3" onclick="getimage('3.jpeg')" style="object-fit: cover">
+            <img src="4.jpeg" alt="Image 3" onclick="getimage('4.jpeg')" style="object-fit: cover">
+        </div>
+        <div id="secondDiv">
+            <h2>Second Div</h2>
+        </div>
+    </div> -->
+
+	<script type="text/javascript">
+		function getimage(img_path) {
+			document.getElementById('output_id').innerHTML="<img src='"+img_path+"'style=width:200px;height:200px;'/>";
+				}
+	</script>
+
+</body>
+</html>

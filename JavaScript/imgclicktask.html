@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Selection</title>
+    <style>
+        #mainDiv {
+            display: flex;
+        }
+
+        #firstDiv, #secondDiv {
+            width: 50%;
+            padding: 10px;
+            border: 10px solid seagreen;
+        }
+
+        #firstDiv img {
+            width: 200px;
+            height: 100px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #secondDiv img {
+
+            max-width: 300px;
+            max-height: 200px;
+            align
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Selection</h1>
+    <div id="mainDiv">
+        <div id="firstDiv">
+            <h2>First Div</h2>
+            <img src="1.jpeg" alt="Image 1" onclick="selectImage('1.jpeg')" style="object-fit: cover">
+            <img src="2.jpeg" alt="Image 2" onclick="selectImage('2.jpeg')" style="object-fit: cover">
+            <img src="3.jpeg" alt="Image 3" onclick="selectImage('3.jpeg')" style="object-fit: cover">
+            <img src="4.jpeg" alt="Image 3" onclick="selectImage('4.jpeg')" style="object-fit: cover">
+        </div>
+        <div id="secondDiv">
+            <h2>Second Div</h2>
+        </div>
+    </div>
+
+    <script>
+        console.log(2+2+'5')
+        function selectImage(imageSrc) {
+            var secondDiv = document.getElementById('secondDiv');
+            secondDiv.innerHTML = ''; // Clear the second div
+            var selectedImage = document.createElement('img');
+            selectedImage.src = imageSrc;
+            secondDiv.appendChild(selectedImage);
+        }
+    </script>
+</body>
+</html>

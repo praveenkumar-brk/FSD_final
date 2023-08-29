@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h2>Functions</h2>
+	<script type="text/javascript">
+	// 	function test(name) {
+	// 		document.write(name)
+	// 	}
+	// 	// test('sim')
+	// 	var p= prompt('Scan your id')
+	// 	function getrollno(rollno){
+	// 		document.write(rollno);
+	// 	}
+	// 	getrollno(p)
+		function sum(num1=0,num2=0) {
+			document.write(num1+num2)
+		}
+		function cube(a) {
+			document.write(a**3)
+		}
+		 // cube(2)
+		//anonymous function is a function without having function name
+		var out=function(num){
+			return(num*10)
+		}
+		document.write(out(2)+"<br>");
+		let arr=['pk','pb','mh'];
+		// document.write(arr.toString())
+		// document.write(arr.join("*"))
+
+
+		//arrow funtion =>
+		//no function keyword
+		//after function name have to give =>
+		//no need use curly braces also
+		mul=(n1,n2)=>{
+			document.write(n1*n2);
+		}
+		// mul(9,9)
+		//arrow function with 1 argument
+		//getid =(rollno) =>{ or
+		getid =rollno =>{
+			document.write(rollno);
+		}
+		// getid(22)
+		test=_=>{
+			document.write('loading...')
+		}
+		test()
+		//setTimeout() function
+		setTimeout(test1,5000)
+		function test1(){
+			document.write('execute after 5s secs')
+		}
+	 </script>
+
+</body>
+</html>

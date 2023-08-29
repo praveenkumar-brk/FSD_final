@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h2>Regular Expressions</h2>
+	<input type="text" name="" id="inp">
+	<button onclick="numornot()">Check Validity</button>
+	<br>
+	<span id="msg_id"></span>
+	<script type="text/javascript">
+		function numornot() {
+			//re=/^[0-9]{10}$/ //numbers only upto 10 range
+			re=/^[8][0-9]{9}$/ //starting number is 8 only
+			let n=document.getElementById('inp').value;
+			output=re.test(n); //correct(by $)
+			if (output==true) {
+				document.getElementById('msg_id').innerText='Correct';
+				document.getElementById('msg_id').style.color='green';
+
+			}else{
+				document.getElementById('msg_id').innerText='please enter correct format';
+				document.getElementById('msg_id').style.color='red';
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>imgs</title>
+</head>
+<body>
+	<center>
+	<button onclick="nxt()">Next</button>
+	<button onclick="pre()">Previous</button>
+	<p id="output">
+		<img src="1.jpeg" style="width:500px; height: 300px;">
+	</p>
+	</center>
+
+	<script type="text/javascript">
+		var i=1;
+		function nxt(){
+			if (i<5){
+				var res=++i
+			document.getElementById('output').innerHTML ="<img src='"+res+".jpeg' style='width:500px; height: 300px;'>"
+		}
+	}
+	function pre(){
+			if (i>1){
+				var res=--i
+			document.getElementById('output').innerHTML ="<img src='"+res+".jpeg' style='width:500px; height: 300px;'>"
+		}
+	}
+
+	</script>
+</body>
+</html>

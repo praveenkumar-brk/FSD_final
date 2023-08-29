@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover Candle</title>
+    <style>
+        
+        .candle-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        #candle {
+            margin-left: 300px;
+            width: 50%; 
+            height: auto;
+            transition: opacity 0.5s; 
+        }
+    </style>
+</head>
+<body>
+    <div class="candle-container">
+        <img id="candle" src="can.jpg" alt="Unlit Candle">
+    </div>
+
+    <script>
+        let candle = document.getElementById('candle');
+        let lit = 'can1.jpg'; // Replace with  lit candle image
+        let unlit = 'can.jpg'; // Replace with unlit candle image
+
+        candle.addEventListener('mouseover', function(){
+            // Change the image source to the lit candle
+            candle.src = lit;
+        });
+        candle.addEventListener('mouseout', function(){
+            // Change the image source back to the unlit candle
+            candle.src = unlit; 
+        });
+    </script>
+</body>
+</html>

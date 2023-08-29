@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<!-- <h1 id="h_id">Query selector method</h1>
+	<p class="course">HTML</p>
+	<p class="course">CSS</p>
+	<p class="course">BS</p>
+	<script type="text/javascript">
+		let ele=document.querySelector('.course');
+		ele.style.color='red'
+		
+	</script> -->
+	<h1>The Document Object</h1>
+	<h2>The querySelectorAll() Method</h2>
+	<p>Set background color of all h3,div and snap elements:</p>
+	<h1>a h1 element</h1>
+	<h2>a h2 element</h2>
+	<h3>a h3 element</h3>
+	<div>a div element</div>
+	<p>A p element.</p>
+	<p>A p element with a <span style="color:brown">span</span> element inside.</p>
+	<script type="text/javascript">
+		const nodeList =document.querySelectorAll("h2,div,span");
+		for (var i = 0; i < nodeList.length; i++) {
+			nodeList[i]
+		}
+	</script>
+
+</body>
+</html>

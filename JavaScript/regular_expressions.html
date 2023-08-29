@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h2>Regular Expression</h2>
+	<script type="text/javascript">
+		let re=/batch/;
+		let output= re.test("FSD batch");
+		console.log(output);
+		// these regular expressions are case sensitive
+		//by writing 'i' at the end of value it tasks value without case sensitive condition
+		let re1=/BATCh/i;
+		let output1= re1.test("FSD batch");
+		console.log(output1);
+		//to check starting char of string
+		let re2=/^b/;
+		output2=re2.test("batch"); //true
+		output2=re2.test("tbatch"); //false
+		console.log(output2)
+
+		//to check the index of ele multiple times
+		//by writing g at end of value
+		// re=/batch/g;
+		// res=re.exec("full stack batch course batch");
+		// console.log(res);
+		// console.log(res.index);
+		// res=re.exec("full stack batch course batch");
+		// console.log(res.index);
+
+		//to check the length or range of a number
+		// syntax---/^[b][a-b]{c}$/
+
+		 re=/^[0-9]{10}/ //vaild upto 10 numbers but exceeded the range
+		re=/^[0-9]{10}$/	//vaild upto 10 numbers not exceeded range by $
+		re=/^[9][0-9]{9}$/ //starting with number 9
+		output5=re.test('9133032066');
+		console.log(output5)
+
+	</script>
+</body>
+</html>

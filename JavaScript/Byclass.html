@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	
+	<p class="course">HTML</p>
+	<p class="course">CSS</p>
+	<p class="course">BS</p>
+	<span>praveen</span>
+	<ul>
+		<li>AEC</li>
+		<li>ACET</li>
+		<li>ACOE</li>
+	</ul>
+	<script type="text/javascript">
+		let paras=document.getElementsByClassName('course');
+		let name=document.getElementsByTagName('span').innerHTML;
+		console.log(paras);
+		paras[0].innerHTML ='Hyper Text Markup Language';
+		paras[2].style.color='red';
+		let lis=document.getElementsByTagName('li')
+		lis[0].style.color='red'
+		lis[0].style.fontSize ='50px';
+		
+
+
+		
+	</script>
+
+</body>
+</html>

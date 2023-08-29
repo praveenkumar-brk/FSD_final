@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Spread Operator</h1>
+	<p>It takes an iteration and expands or sperates each element.</p>
+	<p>Notation as...(triple dots)</p>
+	<script type="text/javascript">
+		//--------------1st way-------------//
+		let arr=[39,49,96,97]
+		// console.log(arr);
+		// console.log(...arr);
+		//--------------2nd way-------------//
+		//let arr1=[2,3,4,6,arr]
+		let arr1=[2,3,4,6,...arr];
+		console.log(arr1)
+		//--------------3rd way-------------//
+		let arr2=[5,6,7,8,9];
+		let arr3=[4,8,12,16];
+		// let arr4=[...arr2,...arr3];
+		let arr4=[...arr2,55,65,...arr3,89];
+		console.log(arr4)
+		//--------------4th way-------------//
+		let str='drive ready';
+		console.log(str);
+		console.log(...str);
+		function sum(a,b,c,d,e) {
+			return(a+b+c+d+e)
+		}
+		let arr5=[10,20,30,40,76];
+		console.log(sum(...arr5));
+		
+
+
+	</script>
+
+</body>
+</html>

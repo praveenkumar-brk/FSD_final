@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array methods| map()</title>
+</head>
+<body>
+<p>This method creates new array and return it after iteration will completed.</p>
+<table id=table_id cellspacing="0" border="1">
+	
+</table>
+<div style="width:500px; height: 200px; background-color: green;" id="division"></div>
+<script type="text/javascript">
+	let trainees=['praveen','prakash','vara','hussain'];
+	let arr =trainees.map(function(ele,index,old_array){
+		return "Mr."+ele
+	})
+	// or
+	// let arr1=trainees.map(test);
+	//function test(ele,index,old_array) {
+	//	return "Mr."+ele
+	//}
+	// console.log(arr)
+	let students=[
+		{'name':'prakash',
+		'rollno':1234},{'name':'praveen',
+		'rollno':5678}]
+// 	students.map(function(each_trainee,i,arr){
+// 	console.log((i+1)+". "+each_trainee.name+" "+each_trainee.rollno)
+// })
+	let tr='';
+	students.map(function(each_student,i,arr){
+		tr+="<tr><td>"+(i+1)+"</td><td>"+each_student.name+"</td><td>"+each_student.rollno+"</td></tr>";
+	})
+	document.getElementById('table_id').innerHTML=tr;
+	let std=[
+			{'name':'prakash',
+			'rollno':1234},{'name':'praveen',
+			'rollno':5678}]
+	let div='';
+	std.map(function(each_std,i,arrs){
+		div+="<div>"+(i+1)+" "+each_std.name+" "+each_std.rollno+"</div>";
+	})
+	document.getElementById('division').innerHTML=div;
+	let l=[]
+	std.map(function(each){
+		l.push(each.name);
+		l.push(each.rollno);
+	})
+	document.write(l)
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<table border=" ">
+		<thead>
+			<tr>
+				<th>course name</th>
+				<th> course number</th>
+				<th>course fee</th>
+				<th>place</th>
+			</tr>
+			<tbody id="tbodyid">
+				
+			</tbody>
+		</thead>
+	</table>
+	<script type="text/javascript">
+		let s=[{'course':'HTML','number':'123','fee':'250','place':'drm'},
+			{'course':'CSS','number':'123','fee':'250','place':'drm'},
+			{'course':'JS','number':'123','fee':'250','place':'drm'}]
+		for (var i = 0; i < s.length; i++) {
+			let tr=document.createElement('tr');
+			
+			let td1=document.createElement('td')
+			let td2=document.createElement('td')
+			let td3=document.createElement('td')
+			let td4=document.createElement('td')
+			td1.innerText =s[i].course
+			td2.innerText =s[i].number
+			td3.innerText =s[i].fee
+			td4.innerText =s[i].place
+			tr.append(td1)
+			tr.append(td2)
+			tr.append(td3)
+			tr.append(td4)
+			document.getElementById('tbodyid').append(tr)
+
+		}
+		
+	</script>
+</body>
+</html>

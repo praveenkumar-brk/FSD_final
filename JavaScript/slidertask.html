@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Images scroll</title>
+    <style>
+        .slid1 {
+            width:100%;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.2s ease-in-out;
+         
+        }
+
+        .slide {
+            flex: 0 0 100% ;
+            width:100%;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slid1">
+        <div class="slider">
+            <div class="slide"><img src="1a.jpg"></div>
+            <div class="slide"><img src="2a.jpg"></div>
+            <div class="slide"><img src="3a.jpg"></div>
+             <div class="slide"><img src="4a.jpg"></div>
+           
+        </div>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+
+        let currentIndex = 0;
+
+        function updateSliderPosition() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSliderPosition();
+        }
+
+        const interval = setInterval(nextSlide, 2000);
+
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                clearInterval(interval);
+            } else {
+                interval = setInterval(nextSlide, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

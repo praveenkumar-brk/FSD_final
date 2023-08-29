@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Constructor</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// class student{
+		// 	constructor(num,fnam,lnam,clg){
+		// 		this.rollno=num;
+		// 		this.first_name=fnam;
+		// 		this.last_name=lnam;
+		// 		this.college=clg;
+		// 	}
+
+		// }
+		// let obj =new student(2345,'praveen','kumar','AEC');
+		// console.log(obj.rollno,obj.first_name)
+		// console.log(obj.first_name)
+		// console.log(obj.last_name)
+		// console.log(obj.college)
+		class car{
+			constructor(brand,model,color,cc,rpm,torq){
+				this.company=brand;
+				this.series=model;
+				this.colour=color;
+				this.capacity=cc;
+				this.RPM=rpm;
+				this.Torque=torq;
+			}
+		}
+		let obj1= new car('mustang','GT','Black','5000cc','6000 rpm','5000 N.m')
+		console.log(obj1.company,obj1.series,obj1.capacity,obj1.RPM,obj1.Torque)
+
+		class student{
+			constructor(num,fnam,lnam,clg){
+				this.rollno=num;
+				this.first_name=fnam;
+				this.last_name=lnam;
+				this.college=clg;
+				this.getfullname=function(){
+					return this.first_name+" "+this.last_name
+				}
+			}
+
+		}
+		let trainer =new student(2345,'praveen','kumar','AEC');
+		console.log(trainer.rollno);
+		console.log(trainer.first_name)
+		console.log(trainer.last_name)
+		console.log(trainer.college)
+		document.write(trainer.getfullname())
+
+
+
+
+
+
+	</script>
+</body>
+</html>
