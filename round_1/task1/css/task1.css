@@ -1,0 +1,176 @@
+.pp2{
+            margin-top: 100px;
+            color: white;
+        }
+        .pp5{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            color: white;
+            display: inline;
+        }
+        .pp3{
+            color: white;
+        }
+        #cad{
+            
+            font-size: 50px;
+            color: #be2edd;
+            margin-bottom: 10px;
+            padding: 10px;
+
+        }
+        .ss{
+            margin-left: 50%;
+            
+        }
+        .IC{
+            font-size: 20px;
+            font-weight: bold;
+            font-style: arial;
+            margin-left: 20px;
+        }
+        .nav-item ,dropdown{
+            margin-left: 20px;
+        }
+        .start{
+    background-image: url('../images/main1.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: 100% 70%; /* 100% width and auto height to maintain aspect ratio */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed;
+    object-fit: cover;         }
+    .agic{
+        color: #be2edd;
+    }
+    .content{
+        margin:30px;
+    }
+    .ct1,.ct{
+        opacity: 0.5;
+    }
+    .bt2{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        color:white;
+        padding-left: 40px;
+        padding-right: 40px;
+        background-color: #be2edd;
+    }
+    .bt1{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        color: #be2edd;
+        outline: 2px solid #be2edd ;
+    }
+    .bt3{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        outline: 2px solid ;
+    }
+    .bt5{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        color:white;
+        padding-left: 40px;
+        padding-right: 40px;
+        background-color: #be2edd;
+
+        
+    }
+    .bt4{
+        margin-top: 9px;
+        margin-bottom: 100px;
+        margin-left: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+        outline: 2px solid white;
+        color: white;
+
+    }
+    .bt7{
+        margin-top: 9px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+        outline: 2px solid white;
+        color: white;
+
+    }
+    .imgk{
+        width:100%;
+    }
+    .card-text,.pp{
+        opacity: 0.8;
+    }
+    .fa-square-check{
+        font-size: 20px;
+        color: #be2edd;
+    }
+    .k1{
+        font-weight: bold;
+        font-family: 'Mukta', sans-serif;
+    }
+    .hed{
+        font-weight: bold;
+    }
+    .ft{
+        background-color: #be2edd;
+    }
+    .in1{
+        margin-left: 50px;
+    }
+    .proj{
+        margin-right: 20px;
+        margin-left: 20px;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        
+        position: relative;
+    }
+    .proj1{
+        
+        margin-left: 115px;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        
+    }
+    .proj2{
+        
+       margin-left: 210px;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        
+    }
+    .img-fluid{
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+
+    }
+    .gd{
+        width: 100%;
+    }
+            /* Remove card borders and outlines */
+        .card1{
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            color: #be2edd;
+        }
+        .card-text1{
+            color: black;
+        }
+        .feedback{
+           
+            height: 500px;
+        }
